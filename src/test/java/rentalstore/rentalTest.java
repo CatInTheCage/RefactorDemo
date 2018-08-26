@@ -100,9 +100,9 @@ public class rentalTest {
 
         System.out.println(statement);
 
-        assertEquals("<H1>Rentals for <EM>dali</EM></H1><P>\n" +
-                "Titanic: 3.0<BR>\n" +
-                "<P>You owe<EM>3.0</EM><P>\n" +
-                "On this rental you earned <EM>1</EM> frequent renter points<P>", statement);
+        assertEquals("<H1>Rentals for <EM>dali</EM></H1><P>\n"
+                + "Titanic: 3.0<BR>\n"
+                + "<P>You owe<EM>3.0</EM><P>\n"
+                + "On this rental you earned <EM>1</EM> frequent renter points<P>", statement);
     }
 }
