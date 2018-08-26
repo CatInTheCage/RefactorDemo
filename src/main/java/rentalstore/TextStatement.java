@@ -1,18 +1,6 @@
 package rentalstore;
 import java.util.Enumeration;
-public class TextStatement {
-    public String value(Customer aCustomer) {
-        Enumeration rentals = aCustomer.getRentals();
-        String result = headerString(aCustomer);
-        while(rentals.hasMoreElements()){
-            Rental each = (Rental) rentals.nextElement();
-            //show figures for this rental
-            result += eachRentalString(each);
-        }
-        //add footer lines
-        result +=footerString(aCustomer);
-        return result;
-    }
+public class TextStatement extends Statement{
     public String headerString(Customer aCustomer) {
         return "Rental Record for " + aCustomer.getName() + "\n";
     }
@@ -22,7 +10,6 @@ public class TextStatement {
                 + "\t"
                 + String.valueOf(aRental.getCharge()) + "\n";
     }
-
     public String footerString (Customer aCustomer) {
         return "Amount owed is "
                 + String.valueOf(aCustomer.getTotalCharge())

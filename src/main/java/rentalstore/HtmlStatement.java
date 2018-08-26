@@ -1,18 +1,6 @@
 package rentalstore;
 import java.util.Enumeration;
-public class HtmlStatement {
-    public String value(Customer aCustomer) {
-        Enumeration rentals = aCustomer.getRentals();
-        String result = headerString(aCustomer);
-        while(rentals.hasMoreElements()){
-            Rental each = (Rental) rentals.nextElement();
-            //show figures for this rental
-            result += eachRentalString(each);
-        }
-        //add footer lines
-        result +=footerString(aCustomer);
-        return result;
-    }
+public class HtmlStatement extends Statement{
     String headerString(Customer aCustomer) {
         return "<H1>Rentals for <EM>"
                 + aCustomer.getName()
